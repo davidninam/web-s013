@@ -1,59 +1,138 @@
-# NinaWebApp
+# Nina.com.bo - Web Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+Una aplicación web moderna desarrollada con Angular v21 y Material UI.
 
-## Development server
+## 🚀 Características
 
-To start a local development server, run:
+- **Framework**: Angular v21
+- **UI Library**: Angular Material v21
+- **Estilos**: SCSS con tema personalizado
+- **Responsive Design**: Adaptable a todos los dispositivos
+- **Routing**: Navegación entre múltiples páginas
+
+## 🎨 Paleta de Colores Personalizada
+
+- **Primario**: `#4a2b8c` (Morado)
+- **Secundario**: `#5a189a` (Morado oscuro)
+- **Acento**: `#9d4edd` (Morado claro)
+- **Complementarios**: 
+  - `#c77dff` (Morado muy claro)
+  - `#dec0f1` (Lavanda)
+  - `#ffffff` (Blanco)
+  - `#b8bedd` (Gris lavanda)
+
+## 📱 Páginas
+
+### Página Principal (/)
+- Hero section con llamados a la acción
+- Sección de servicios
+- Testimonios de clientes
+- Footer con enlaces y redes sociales
+
+### Acerca de (/acerca)
+- Información sobre Nina.com.bo
+- Equipo Nina
+- Premios y reconocimientos
+
+### Servicios (/servicios)
+- Desarrollo Web
+- Desarrollo Móvil
+- Software a Medida
+- Consultoría Digital
+
+### Contactos (/contactos)
+- Formulario de contacto con validación
+- Información de contacto
+
+### Login (/login)
+- Formulario de inicio de sesión
+- Validación de campos
+
+### Registro (/registro)
+- Formulario de registro de usuario
+- Validación de contraseñas
+
+## 🧩 Componentes
+
+### Layout
+- **Navbar**: Barra de navegación responsive con menú hamburguesa
+- **Footer**: Pie de página con enlaces y redes sociales
+
+### Landing
+- **LandingHero**: Sección hero con gradiente personalizado
+- **ServicesSection**: Grid de servicios con iconos
+- **Testimonials**: Tarjetas de testimonios con calificaciones
+
+## 🛠️ Instalación
 
 ```bash
+# Instalar dependencias
+npm install
+
+# Ejecutar en modo desarrollo
+npm start
+# o
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Compilar para producción
+npm run build
+# o
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📦 Tecnologías Utilizadas
 
-## Running unit tests
+- Angular 21.0.0
+- Angular Material 21.0.0
+- TypeScript
+- SCSS
+- RxJS
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## �� Estructura del Proyecto
 
-```bash
-ng test
+```
+src/
+├── app/
+│   ├── components/       # Componentes reutilizables
+│   │   ├── navbar/
+│   │   ├── footer/
+│   │   ├── landing-hero/
+│   │   ├── services-section/
+│   │   └── testimonials/
+│   ├── pages/           # Páginas de la aplicación
+│   │   ├── home/
+│   │   ├── about/
+│   │   ├── services/
+│   │   ├── contact/
+│   │   ├── login/
+│   │   └── register/
+│   ├── app.config.ts    # Configuración de la app
+│   ├── app.routes.ts    # Rutas de navegación
+│   └── app.ts          # Componente raíz
+├── styles.scss          # Estilos globales y tema
+└── index.html          # HTML principal
 ```
 
-## Running end-to-end tests
+## 🌐 Características Responsive
 
-For end-to-end (e2e) testing, run:
+- **Desktop**: Menú completo en la barra de navegación
+- **Tablet**: Adaptación de grids y espaciados
+- **Mobile**: Menú hamburguesa con navegación desplegable
 
-```bash
-ng e2e
-```
+## ✨ Buenas Prácticas Implementadas
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Componentes modulares y reutilizables
+- Validación de formularios con ReactiveFormsModule
+- Uso de signals de Angular
+- Importaciones standalone
+- Código documentado con comentarios
+- Uso de Material Design principles
+- Responsive design con Flexbox y Grid
 
-## Additional Resources
+## 📄 Licencia
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ver archivo [LICENSE](LICENSE)
+
+## 👥 Autor
+
+Nina.com.bo - Soluciones digitales innovadoras
