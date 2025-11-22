@@ -1,0 +1,111 @@
+// Navbar styles with custom color palette
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--nina-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  color: white;
+  
+  .brand-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+  }
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  a, button {
+    color: white;
+    
+    &.active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  mat-icon {
+    margin-left: 4px;
+  }
+}
+
+.mobile-menu-button {
+  display: none;
+  color: white;
+}
+
+// Mobile navigation styles
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--nina-primary);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  &.open {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  a {
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+
+  .mobile-submenu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0.25rem 0;
+    
+    .submenu-title {
+      color: var(--nina-light-purple);
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    a {
+      padding-left: 2rem;
+    }
+  }
+}
+
+// Responsive breakpoint for mobile
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+}

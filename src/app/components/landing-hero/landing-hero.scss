@@ -1,0 +1,130 @@
+// Hero section styles
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--nina-primary) 0%, var(--nina-secondary) 50%, var(--nina-accent) 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.cta-primary {
+  background-color: var(--nina-accent) !important;
+  color: white !important;
+  padding: 0.75rem 2rem !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+
+  &:hover {
+    background-color: var(--nina-light-purple) !important;
+  }
+}
+
+.cta-secondary {
+  border-color: white !important;
+  color: white !important;
+  padding: 0.75rem 2rem !important;
+  font-size: 1.1rem !important;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+.hero-visual {
+  position: absolute;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.hero-circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--nina-light-purple) 0%, transparent 70%);
+  opacity: 0.3;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    
+    button {
+      width: 100%;
+    }
+  }
+}

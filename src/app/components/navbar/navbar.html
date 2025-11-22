@@ -1,0 +1,70 @@
+<!-- Responsive Navigation Bar -->
+<mat-toolbar class="navbar" color="primary">
+  <div class="navbar-container">
+    <!-- Logo/Brand -->
+    <a routerLink="/" class="brand">
+      <span class="brand-text">Nina.com.bo</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <nav class="desktop-nav">
+      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        Inicio
+      </a>
+
+      <!-- Acerca de Menu -->
+      <button mat-button [matMenuTriggerFor]="aboutMenu">
+        Acerca de
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #aboutMenu="matMenu">
+        <a mat-menu-item routerLink="/acerca">Nina.com.bo</a>
+        <a mat-menu-item routerLink="/acerca">Equipo Nina</a>
+        <a mat-menu-item routerLink="/acerca">Premios</a>
+      </mat-menu>
+
+      <!-- Servicios Menu -->
+      <button mat-button [matMenuTriggerFor]="servicesMenu">
+        Servicios
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #servicesMenu="matMenu">
+        <a mat-menu-item routerLink="/servicios">Desarrollo Web</a>
+        <a mat-menu-item routerLink="/servicios">Desarrollo Móvil</a>
+        <a mat-menu-item routerLink="/servicios">Software a medida</a>
+        <a mat-menu-item routerLink="/servicios">Consultoría Digital</a>
+      </mat-menu>
+
+      <a mat-button routerLink="/contactos" routerLinkActive="active">
+        Contactos
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button mat-icon-button class="mobile-menu-button" (click)="toggleMobileMenu()">
+      <mat-icon>{{ mobileMenuOpen() ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div class="mobile-nav" [class.open]="mobileMenuOpen()">
+    <a mat-button routerLink="/" (click)="closeMobileMenu()">Inicio</a>
+    
+    <div class="mobile-submenu">
+      <span class="submenu-title">Acerca de</span>
+      <a mat-button routerLink="/acerca" (click)="closeMobileMenu()">Nina.com.bo</a>
+      <a mat-button routerLink="/acerca" (click)="closeMobileMenu()">Equipo Nina</a>
+      <a mat-button routerLink="/acerca" (click)="closeMobileMenu()">Premios</a>
+    </div>
+
+    <div class="mobile-submenu">
+      <span class="submenu-title">Servicios</span>
+      <a mat-button routerLink="/servicios" (click)="closeMobileMenu()">Desarrollo Web</a>
+      <a mat-button routerLink="/servicios" (click)="closeMobileMenu()">Desarrollo Móvil</a>
+      <a mat-button routerLink="/servicios" (click)="closeMobileMenu()">Software a medida</a>
+      <a mat-button routerLink="/servicios" (click)="closeMobileMenu()">Consultoría Digital</a>
+    </div>
+
+    <a mat-button routerLink="/contactos" (click)="closeMobileMenu()">Contactos</a>
+  </div>
+</mat-toolbar>

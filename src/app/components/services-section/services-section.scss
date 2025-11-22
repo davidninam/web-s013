@@ -1,0 +1,101 @@
+// Services section styles
+.services-section {
+  padding: 5rem 2rem;
+  background-color: var(--nina-lighter-purple);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--nina-primary);
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--nina-secondary);
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: white;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(74, 43, 140, 0.15);
+  }
+
+  mat-card-header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0 1rem;
+  }
+
+  .service-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--nina-accent) 0%, var(--nina-light-purple) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mat-icon {
+      font-size: 40px;
+      width: 40px;
+      height: 40px;
+      color: white;
+    }
+  }
+
+  mat-card-content {
+    padding: 1rem 1.5rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--nina-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: #666;
+      line-height: 1.6;
+    }
+  }
+
+  mat-card-actions {
+    padding: 1rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
