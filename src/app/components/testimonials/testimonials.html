@@ -1,0 +1,28 @@
+<!-- Testimonials section -->
+<section class="testimonials-section">
+  <div class="section-container">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    
+    <div class="testimonials-grid">
+      @for (testimonial of testimonials; track testimonial.name) {
+        <mat-card class="testimonial-card">
+          <mat-card-content>
+            <div class="quote-icon">
+              <mat-icon>format_quote</mat-icon>
+            </div>
+            <p class="testimonial-text">{{ testimonial.text }}</p>
+            <div class="rating">
+              @for (star of [1,2,3,4,5]; track star) {
+                <mat-icon class="star">star</mat-icon>
+              }
+            </div>
+            <div class="testimonial-author">
+              <strong>{{ testimonial.name }}</strong>
+              <span>{{ testimonial.company }}</span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  </div>
+</section>

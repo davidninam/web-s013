@@ -1,0 +1,41 @@
+<!-- Services page -->
+<div class="services-page">
+  <section class="services-hero">
+    <div class="container">
+      <h1>Nuestros Servicios</h1>
+      <p class="lead">Soluciones digitales integrales para tu negocio</p>
+    </div>
+  </section>
+
+  <section class="services-detail">
+    <div class="container">
+      <div class="services-grid">
+        @for (service of services; track service.title) {
+          <mat-card class="service-detail-card">
+            <div class="service-icon">
+              <mat-icon>{{ service.icon }}</mat-icon>
+            </div>
+            <mat-card-content>
+              <h2>{{ service.title }}</h2>
+              <p class="description">{{ service.description }}</p>
+              <h3>Características:</h3>
+              <ul>
+                @for (feature of service.features; track feature) {
+                  <li>
+                    <mat-icon>check_circle</mat-icon>
+                    {{ feature }}
+                  </li>
+                }
+              </ul>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" routerLink="/contactos">
+                Solicitar Cotización
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        }
+      </div>
+    </div>
+  </section>
+</div>

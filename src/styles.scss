@@ -1,0 +1,113 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Custom color palette for Nina.com.bo
+@use '@angular/material' as mat;
+
+// Define custom color palettes based on requirements
+$nina-primary: (
+  0: #000000,
+  10: #230051,
+  20: #3a0d71,
+  25: #46168a,
+  30: #4a2b8c,
+  35: #5a3499,
+  40: #6a3ea6,
+  50: #8554c2,
+  60: #a06dd9,
+  70: #b68ae9,
+  80: #cca7f6,
+  90: #e3c4ff,
+  95: #f2e1ff,
+  98: #fdf7ff,
+  99: #fffbff,
+  100: #ffffff,
+);
+
+$nina-secondary: (
+  0: #000000,
+  10: #2a0060,
+  20: #441086,
+  25: #5a189a,
+  30: #6620aa,
+  35: #722bb8,
+  40: #7e36c6,
+  50: #964dd9,
+  60: #ad65ed,
+  70: #c37eff,
+  80: #d99aff,
+  90: #e9b9ff,
+  95: #f4d9ff,
+  98: #fcf0ff,
+  99: #fffbff,
+  100: #ffffff,
+);
+
+$nina-tertiary: (
+  0: #000000,
+  10: #2e1146,
+  20: #46235e,
+  25: #552d6e,
+  30: #63377d,
+  35: #72428d,
+  40: #804c9d,
+  50: #9d4edd,
+  60: #b76cf1,
+  70: #ce8aff,
+  80: #dfa8ff,
+  90: #eec7ff,
+  95: #f7e2ff,
+  98: #fdf5ff,
+  99: #fffbff,
+  100: #ffffff,
+);
+
+html {
+  @include mat.theme((
+    color: (
+      primary: $nina-primary,
+      secondary: $nina-secondary,
+      tertiary: $nina-tertiary,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+}
+
+/* Global styles for Nina web application */
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+/* Custom color variables for easy access throughout the application */
+:root {
+  --nina-primary: #4a2b8c;
+  --nina-secondary: #5a189a;
+  --nina-accent: #9d4edd;
+  --nina-light-purple: #c77dff;
+  --nina-lighter-purple: #dec0f1;
+  --nina-white: #ffffff;
+  --nina-light-gray: #b8bedd;
+}
